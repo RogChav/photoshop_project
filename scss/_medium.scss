@@ -13,6 +13,9 @@ header {
     height: 93px;
     width: 100%;
     #logo {
+        position: fixed;
+        left: 0px;
+        top: 15px;
         width: 50%;
         height: 93px;
         display: -webkit-inline-box;
@@ -32,18 +35,25 @@ header {
             padding-top: 70px;
             list-style: none;
             display: -webkit-inline-box;
+            right: 0px;
+            position: fixed;
             li {
+                border:none;
                 padding: 0 10px;
                 a {
                     text-decoration: none;
                     color: #009688;
                 }
             }
+            li:last-child{
+                border:none;
+            }
         }
     }
 }
 
 section.meetTeam {
+    display:block;
     figure {
         img.meetTheTeam {
             border-top: 1px solid #282727;
@@ -63,7 +73,6 @@ div.display {
     height: 365px;
     width: 100%;
     background: white;
-    padding: 0px 10%;
 }
 
 footer {
@@ -114,121 +123,19 @@ footer {
     }
 }
 
-.sidenavButton {
-    position: absolute;
-    z-index: 1;
-    margin-left: 47%;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-    border-left: 1px solid #282727;
-    figure.sidebarFig {
-        display: inline-block;
-        width: 80%;
-        img {
-            padding-top: 25px;
-            margin-left: 25px;
-        }
-        img.logo {
-            content: url(../images/techiLogo.png);
-        }
-    }
-}
-
-.sidebar {
-    text-decoration: none;
-    font-size: 16px;
-    padding: 16px;
+.displayFooter {
+    text-align:left;
     background: white;
-    color: #282727;
-    display: block;
-    border-top: 1px solid #282727;
-    transition: 0.3s;
-    text-align: center;
-}
-
-.sidebar:last-child {
-    border-bottom: 1px solid #282727;
-}
-
-.sidenav a:hover {
-    color: #009688;
-    background: #282727
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-.exitSidenav {
-    font-weight: bolder;
-    color: #009688;
-    font-size: xx-large;
-    position: absolute;
-    padding-top: 30px;
-    padding-left: 25px;
-    background: transparent !important;
-}
-
-.exitSidenav:hover {
-    color: #282727 !important;
-}
-footer.sidebarFooter{
-    height:45px;
-    position: absolute;
+    height: 50px;
+    width: 100%;
     p{
-        font-size: xx-small;
-        color: white; 
-        padding-left: 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-}
-.sidebarFooterlinks{
-    padding-left: 40px;
-    ul{
-        list-style: none;
-        display: inline-flex;
-    }
-    li {
-        padding: 0 5px;
-        figure {
-            img.facebook {
-                content: url(../images/facebook.png);
-            }
-            img.linkedin {
-                content: url(../images/linkedin.png);
-            }
-            img.twitter {
-                content: url(../images/twitter.png);
-            }
-            img.github {
-                content: url(../images/github.png);
-            }
+        padding-top: 15px;padding-left: 15px;
+        a{
+            color:#009688;
         }
     }
 }
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
-}
+
 .teamCard {
     height: 330px;
     width: 230px;
